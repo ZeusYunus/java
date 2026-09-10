@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
     public void handleText(View v) {
         EditText t = findViewById(R.id.source);
         String input = t.getText().toString();
-
-        Log.d("info", input);
+        ((TextView)findViewById(R.id.output)).setText(input);
+        Toast.makeText(this, input, Toast.LENGTH_LONG).show();
     }
 
 //    public void disable(View v) {
