@@ -16,25 +16,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("failing", "it's not working");
+        findViewById(R.id.button);
     }
 
     public void handleText(View v) {
-        EditText t = findViewById(R.id.source);
-        String input = t.getText().toString();
-        ((TextView)findViewById(R.id.output)).setText(input);
-        Toast.makeText(this, input, Toast.LENGTH_LONG).show();
+        v.setEnabled(false);
+        Log.d("clicked", "Click method");
+        Toast.makeText(this, "clicked", Toast.LENGTH_LONG).show();
     }
-
-//    public void disable(View v) {
-//        findViewById(R.id.button).setEnabled(false);
-//        ((Button)findViewById(R.id.button)).setText("new new disabled");
-//
-//
-//        v.setEnabled(false);
-//        Log.d("success", "Button disabled");
-//
-//        Button button = (Button) v;
-//        button.setText("Disabled");
-//    }
 
 }
